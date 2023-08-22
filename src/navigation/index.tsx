@@ -13,11 +13,16 @@ const TabNavigator = () => {
     <Tab.Navigator
       initialRouteName="Home"
       screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
+          height: 85,
+          borderRadius: 20,
+        },
         tabBarActiveTintColor: colors.orange,
         tabBarInactiveTintColor: colors.gray,
         tabBarIconStyle: {
-          width: 25,
-          height: 25,
+          width: 27,
+          height: 27,
         },
       }}
     >
