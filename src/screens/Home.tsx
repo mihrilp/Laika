@@ -4,19 +4,36 @@ import {
   StyleSheet,
   KeyboardAvoidingView,
   TextInput,
+  View,
 } from "react-native";
-import { SearchIcon } from "@/icons";
+import { Hair, SearchIcon } from "@/components/icons";
 import colors from "@/styles/colors";
+import { Category } from "@/components";
 
 function Home() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.text}>Hello,</Text>
-      <Text style={styles.text}>Compassionate Friend of Animals</Text>
-      <KeyboardAvoidingView style={styles.searchBar}>
-        <TextInput style={styles.searchInput} placeholder="Search a brand..." />
-        <SearchIcon style={styles.searchIcon} color={colors.gray} />
-      </KeyboardAvoidingView>
+      <View style={styles.content}>
+        <View style={styles.header}>
+          <Text style={styles.text}>
+            Hello, {"\n"} Compassionate Friend of Animals
+          </Text>
+          <KeyboardAvoidingView style={styles.searchBar}>
+            <TextInput
+              style={styles.searchInput}
+              placeholder="Search a brand..."
+            />
+            <SearchIcon style={styles.searchIcon} color={colors.gray} />
+          </KeyboardAvoidingView>
+        </View>
+        <View>
+          <Text style={styles.title}>Categories</Text>
+          <Category
+            name="Hair"
+            icon={<Hair style={styles.hairIcon} color={colors.gray} />}
+          />
+        </View>
+      </View>
     </SafeAreaView>
   );
 }
@@ -24,18 +41,22 @@ function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+  },
+  content: {
     padding: 20,
+    width: "100%",
+  },
+  header: {
+    marginTop: 40,
+    marginBottom: 15,
+    width: "100%",
   },
   text: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "600",
-    lineHeight: 28,
   },
   searchBar: {
     flexDirection: "row",
-    width: "80%",
     backgroundColor: "#fff",
     marginVertical: 20,
     borderRadius: 10,
@@ -50,6 +71,15 @@ const styles = StyleSheet.create({
   },
   searchIcon: {
     width: "8%",
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: "600",
+    marginBottom: 15,
+  },
+  hairIcon: {
+    width: 30,
+    height: 30,
   },
 });
 

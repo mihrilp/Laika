@@ -2,7 +2,7 @@ import Categories from "@/screens/Categories";
 import Home from "@/screens/Home";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import * as Icons from "@/icons";
+import * as Icons from "@/components/icons";
 import colors from "@/styles/colors";
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();

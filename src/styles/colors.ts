@@ -1,6 +1,6 @@
 export default {
     orange: '#f9a620',
-    gray: "#465c69"
+    gray: "#465c69",
 }
 
   
